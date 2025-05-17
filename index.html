@@ -15,7 +15,14 @@
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@lovable_dev" />
-  <link rel="manifest" href="manifest.json" />  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <link rel="manifest" href="manifest.json" />  <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/service-worker.js')
+        .then(() => console.log('Service Worker registrado com sucesso'))
+        .catch(error => console.error('Erro ao registrar o Service Worker:', error));
+    }
+  </script>
   </head>
 
   <body>
